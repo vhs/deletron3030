@@ -1,5 +1,9 @@
 #!/bin/sh
 
+if [ ! -f .env ] ; then
+ echo "Missing .env file"
+fi
+
 docker rmi deletron3030
 docker build -t deletron3030 .
 docker kill deletron3030
