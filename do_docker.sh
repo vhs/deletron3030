@@ -2,6 +2,7 @@
 
 if [ ! -f .env ] ; then
  echo "Missing .env file"
+ exit
 fi
 
 docker rmi deletron3030
