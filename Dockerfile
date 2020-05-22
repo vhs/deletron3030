@@ -1,10 +1,13 @@
 FROM node:latest
 
+ENV LIBSASS_EXT="no"
+ENV NODE_ENV="production"
+
 WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
-RUN LIBSASS_EXT="no" npm install
+RUN npm install
 
 EXPOSE 3000
 
